@@ -65,12 +65,15 @@ echo -e " [${g}✔${endc}]::[${g}${b}Installation Of Core Software${enda}${endc}
 echo
 
 list=(
-lightdm
-smdlinux-lightdm-gtk-greeter-plasma
-smdlinux-lightdm-gtk-greeter-settings
+#lightdm
+#smdlinux-lightdm-gtk-greeter-plasma
+#smdlinux-lightdm-gtk-greeter-settings
+sddm
+#sddm-kcm
 smdlinux-wallpapers-git
 plasma-meta
 kde-applications-meta
+smdlinux-sddm-theme-plasma
 )
 
 count=0
@@ -83,16 +86,17 @@ done
 
 ###############################################################################
 
-echo
-echo -e " [${g}✔${endc}]::[${g}${b}Copying all files and folders from /etc/skel to ~${enda}${endc}]"
-echo
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-cp -arf /etc/skel/. ~
+#echo
+#echo -e " [${g}✔${endc}]::[${g}${b}Copying all files and folders from /etc/skel to ~${enda}${endc}]"
+#echo
+#cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+#cp -arf /etc/skel/. ~
 
 echo
-echo -e " [${g}✔${endc}]::[${g}${b}Enabling lightdm Display Manager${enda}${endc}]"
+echo -e " [${g}✔${endc}]::[${g}${b}Enabling SDDM Display Manager${enda}${endc}]"
 echo
-sudo systemctl enable lightdm.service -f
+#sudo systemctl enable lightdm.service -f
+sudo systemctl enable sddm.service -f
 
 echo
 echo -e " [${g}✔${endc}]::[${g}${b}A Minimal Functional Desktop Is Now Installed${enda}${endc}]"
