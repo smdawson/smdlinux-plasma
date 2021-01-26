@@ -84,6 +84,7 @@ kde-rubberband-maximize-animation-git
 kvantum-qt5
 latte-dock
 smdlinux-sddm-theme-plasma-git
+smdlinux-splash-dark-plasma-git
 kwin-scripts-forceblur
 material-cursors-git
 smdlinux-config-plasma-git
