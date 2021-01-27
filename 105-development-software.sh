@@ -3,16 +3,16 @@
 #
 ##########################################################
 #                                                        #
-#               SMD-Arch-XFCE script                     #
+#            SMD-Linux installation script               #
 #  ArchLinux Applications Automatic Installation Script  #
 #  Inspired and Forked From                              #
 #  https://github.com/SofianeHamlaoui/ArchI0             #
 #  And                                                   #
 #  https://github.com/arcolinuxd/arco-xfce               #
 ##########################################################
-#  +FIRST  : sudo chmod +x arch-xfce.sh                  #
+#  +FIRST  : sudo chmod +x 105-development-software.sh   #
 #                (Give EXEC Access To Script)            #
-#  +TO RUN    : ./arch-xfce.sh                           #
+#  +TO RUN    : ./105-development-software.sh            #
 ##########################################################
 #                                                        #
 #                DO NOT JUST RUN THIS.                   #
@@ -41,7 +41,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20201220"
+version="20210126"
 
 ####################### Functions ########################
 
@@ -82,12 +82,12 @@ discord_arch_electron
 filezilla
 firefox
 git
+gnome-keyring
 joplin
 meld
 sublime-text-3
 the_platinum_searcher-bin
 xclip
-xdg-user-dirs
 )
 
 count=0
@@ -101,4 +101,4 @@ done
 ###############################################################################
 
 end_category Development
-echo -e " ${bu}SMD-Arch Installation Script Version${b} $version ${enda} ${endc}"
+echo -e " ${bu}SMD-Linux Installation Script Version${b} $version ${enda} ${endc}"

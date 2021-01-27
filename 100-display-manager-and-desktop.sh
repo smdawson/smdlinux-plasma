@@ -3,17 +3,17 @@
 #
 ##########################################################
 #                                                        #
-#              SMDLINUX-Plasma script                    #
+#            SMDLINUX-Plasma Installation script         #
 #  ArchLinux Applications Automatic Installation Script  #
 #  Inspired and Forked From                              #
 #  https://github.com/SofianeHamlaoui/ArchI0             #
 #  And                                                   #
 #  https://github.com/arcolinuxd/arco-xfce               #
-##########################################################
-#  +FIRST  : sudo chmod +x arch-xfce.sh                  #
-#                (Give EXEC Access To Script)            #
-#  +TO RUN    : ./arch-xfce.sh                           #
-##########################################################
+################################################################
+#  +FIRST  : sudo chmod +x 100-display-manager-and-desktop.sh  #                
+#                (Give EXEC Access To Script)                  #
+#  +TO RUN    : ./100-display-manager-and-desktop.sh           #
+################################################################
 #                                                        #
 #                DO NOT JUST RUN THIS.                   #
 #       EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.         #
@@ -41,7 +41,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20201220"
+version="20210126"
 
 ####################### Functions ########################
 
@@ -74,6 +74,7 @@ smdlinux-wallpapers-git
 plasma-meta
 kde-applications-meta
 smdlinux-sddm-theme-plasma
+xdg-user-dirs
 )
 
 count=0

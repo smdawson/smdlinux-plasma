@@ -80,11 +80,15 @@ chromeos-kde-git
 mojave-gtk-theme
 mcmojave-kde-theme-git
 tela-icon-theme
+surfn-arc-breeze-icons
+mcmojave-circle-icon-theme-git
+sardi-icons
 kde-rubberband-maximize-animation-git
 kvantum-qt5
 latte-dock
 smdlinux-sddm-theme-plasma-git
 smdlinux-splash-dark-plasma-git
+libappindicator-gtk3
 kwin-scripts-forceblur
 material-cursors-git
 smdlinux-config-plasma-git
