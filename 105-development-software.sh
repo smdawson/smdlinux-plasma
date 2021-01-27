@@ -82,7 +82,6 @@ discord_arch_electron
 filezilla
 firefox
 git
-gnome-keyring
 joplin
 meld
 sublime-text-3
