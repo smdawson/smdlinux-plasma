@@ -86,6 +86,7 @@ sardi-icons
 kde-rubberband-maximize-animation-git
 kvantum-qt5
 latte-dock
+smdlinux-latte-git
 smdlinux-sddm-theme-plasma-git
 smdlinux-splash-dark-plasma-git
 libappindicator-gtk3
