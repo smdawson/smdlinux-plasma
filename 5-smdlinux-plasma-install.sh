@@ -3,16 +3,18 @@
 #
 ##########################################################
 #                                                        #
-#               SMD-Arch-XFCE script                     #
+#               SMD-Linux Install Script                 #
 #  ArchLinux Applications Automatic Installation Script  #
 #  Inspired and Forked From                              #
 #  https://github.com/SofianeHamlaoui/ArchI0             #
 #  And                                                   #
 #  https://github.com/arcolinuxd/arco-xfce               #
 ##########################################################
-#  +FIRST  : sudo chmod +x arch-xfce.sh                  #
+#  +FIRST  : sudo chmod +x smdlinux-install.sh           #
 #                (Give EXEC Access To Script)            #
-#  +TO RUN    : ./arch-xfce.sh                           #
+#  +TO RUN    : ./smdlinux-plasma-install.sh             # 
+#                                                        #
+#  Add smdlinux repos and key before running             #
 ##########################################################
 #                                                        #
 #                DO NOT JUST RUN THIS.                   #
@@ -101,11 +103,9 @@ end_category Bash
 category Accessories
 
 list=(
-catfish
+pipes.sh
 cronie
-plank
-xfburn
-#variety
+mintstick-git
 yad
 )
 
@@ -124,10 +124,14 @@ end_category Accessories
 category Development
 
 list=(
+arduino
 atom
 devtools
 geany
+git
+gitahead-bin
 meld
+sublime-text-3
 )
 
 count=0
@@ -142,13 +146,44 @@ end_category Development
 
 ###############################################################################
 
+category Fonts
+
+list=(
+smdlinux-fonts-git
+awesome-terminal-fonts
+adobe-source-sans-pro-fonts
+cantarell-fonts
+noto-fonts
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-hack
+ttf-inconsolata
+ttf-liberation
+ttf-roboto
+ttf-ubuntu-font-family
+tamsyn-font
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+end_category Fonts
+
+###############################################################################
+
 category Games
 
 list=(
-kmines
+#kmines
 steam-native-runtime
 steam
-supertuxkart
+#supertuxkart
 )
 
 count=0
@@ -168,13 +203,11 @@ category Graphics
 list=(
 cura	
 gimp
-gnome-font-viewer
-gpick
 inkscape
 nomacs
 openscad
 prusa-slicer
-ristretto
+slic3r
 )
 
 count=0
@@ -192,7 +225,8 @@ end_category Graphics
 category Internet
 
 list=(
-discord
+discord_arch_electron
+filezilla
 firefox
 hexchat
 qbittorrent
@@ -216,8 +250,9 @@ category Multimedia
 list=(
 audacity
 deadbeef
+obs-studio
 peek
-simplescreenrecorder
+pithos
 vlc
 )
 
@@ -243,6 +278,8 @@ hunspell
 hunspell-en_US
 hyphen
 hyphen-en
+joplin
+joplin-desktop
 libmythes
 mythes-en
 libreoffice-fresh
@@ -260,65 +297,120 @@ end_category Office
 
 ###############################################################################
 
+category Printers
+
+list=(
+cups
+cups-pdf
+ghostscript
+gsfonts
+gutenprint
+gtk3-print-backends
+libcups
+system-config-printer
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+end_category Printers
+
+sudo systemctl enable cups.service
+
+echo
+echo -e " [${g}✔${endc}]::Print Services ${b}${r}[Enabled]${endc}${enda}"
+echo
+
+###############################################################################
+
+category SMD-Linux-General
+
+list=(
+smdlinux-bin-git
+smdlinux-hblock-git
+smdlinux-root-git
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+end_catrgory SMD-Linux-General
+
+###############################################################################
+
+category Sound
+
+list=(
+pulseaudio
+pulseaudio-alsa
+#pavucontrol
+alsa-firmware
+alsa-lib
+alsa-plugins
+alsa-utils
+gstreamer
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-ugly
+playerctl
+#volumeicon
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+end_catrgory Sound
+
+###############################################################################
+
 category System
 
 list=(
 arc-gtk-theme
-accountsservice
-arduino
-baobab
-curl
 dconf-editor
-dmenu dmidecode
-ffmpegthumbnailer
+dmenu
+dmidecode
 glances
-gnome-disk-utility
 gnome-keyring
 gparted
 go
 grsync
-gtk-engine-murrine
-gvfs
-gvfs-mtp
 hardinfo
 hddtemp
 htop
-imagemagick
-kvantum-qt5
-kvantum-theme-arc
-lm_sensors
+jq
 lsb-release
-mlocate
 neofetch
 net-tools
-noto-fonts
 numlockx
-polkit-gnome
-qt5ct
+pamac-aur
 reflector
-sane
 screenfetch
-scrot
 simple-scan
 sysstat
-termite
-thunar
-thunar-archive-plugin
-thunar-volman 
-tumbler
 vnstat
 w3m
 wget
 wmctrl
-unclutter
-rxvt-unicode
-urxvt-perls
 whois
-xclip
-xdg-user-dirs
 xdo
 xdotool 
-xfce4-notifyd
 zenity
 zsh
 zsh-completions
@@ -334,6 +426,35 @@ for name in "${list[@]}" ; do
 done
 
 end_category System
+
+###############################################################################
+
+category Utilities
+
+list=(
+bashtop
+bitwarden-bin
+downgrade
+hardcode-fixer-git
+inxi
+mugshot
+the_platinum_searcher-bin
+trizen
+#variety
+xclip
+yay-bin
+youtube-dl
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+end_category Utilities
 
 ###############################################################################
 
@@ -363,6 +484,35 @@ end_category Unpack
 
 ###############################################################################
 
-echo -e " [${g}✔${endc}]::Software From ${b}${r}[Arch Linux Repository]${endc}${enda} Installed"
+category Final
+
+list=(
+hardcode-fixer-git
+)
+
+count=0
+
+for name in "${list[@]}" ; do
+  count=$[count+1]
+  echo -e " ${y}Installing package # "$count" ${b}["$name"]${enda} ${endc}" ;
+  install $name
+done
+
+
+echo -e " [${r}!${endc}]::Fixing hardcoded icon paths for applications ${b}${r}[Wait for it]${endc}${enda}"
+echo
+sudo hardcode-fixer
+echo -e " [${g}✔${endc}]::Fixing hardcoded icon paths for applications ${b}${g}[Completed]${endc}${enda}"
+
+end_category Final
+
+###############################################################################
+
+echo -e " [${g}✔${endc}]::Copying all files and folders from ${b}${bu}[ /etc/skel to ~ ]${endc}${enda}"
+echo
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+cp -arf /etc/skel/. ~
+
+echo -e " [${g}✔${endc}]::Software For ${b}${r}[SMD-Linux Plasma]${endc}${enda} Installed"
 echo
 echo -e " ${bu}SMD-Arch Installation Script Version${b} $version ${enda} ${endc}"

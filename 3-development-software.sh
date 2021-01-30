@@ -3,16 +3,16 @@
 #
 ##########################################################
 #                                                        #
-#              SMD-Linux Install Script                  #
-#  SMD-Linux Automatic Installation Script               #
+#            SMD-Linux installation script               #
+#  ArchLinux Applications Automatic Installation Script  #
 #  Inspired and Forked From                              #
 #  https://github.com/SofianeHamlaoui/ArchI0             #
 #  And                                                   #
 #  https://github.com/arcolinuxd/arco-xfce               #
 ##########################################################
-#  +FIRST  : sudo chmod +x 110-fonts.sh                  #
+#  +FIRST  : sudo chmod +x 105-development-software.sh   #
 #                (Give EXEC Access To Script)            #
-#  +TO RUN    : ./arch-xfce.sh                           #
+#  +TO RUN    : ./105-development-software.sh            #
 ##########################################################
 #                                                        #
 #                DO NOT JUST RUN THIS.                   #
@@ -41,7 +41,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="2.0.0-1"
+version="20210126"
 
 ####################### Functions ########################
 
@@ -73,23 +73,21 @@ function end_category {
 
 ###############################################################################
 
-category Fonts
+category Development
 
 list=(
-smdlinux-fonts-git
-awesome-terminal-fonts
-adobe-source-sans-pro-fonts
-cantarell-fonts
-noto-fonts
-ttf-bitstream-vera
-ttf-dejavu
-ttf-droid
-ttf-hack
-ttf-inconsolata
-ttf-liberation
-ttf-roboto
-ttf-ubuntu-font-family
-tamsyn-font
+bitwarden-bin
+devtools
+discord_arch_electron
+filezilla
+firefox
+git
+joplin
+joplin-desktop
+meld
+sublime-text-3
+the_platinum_searcher-bin
+xclip
 )
 
 count=0
@@ -102,5 +100,5 @@ done
 
 ###############################################################################
 
-end_category Fonts
-echo -e " ${bu}SMD-Linux Fonts Installation Script Version${b} $version ${enda} ${endc}"
+end_category Development
+echo -e " ${bu}SMD-Linux Installation Script Version${b} $version ${enda} ${endc}"
