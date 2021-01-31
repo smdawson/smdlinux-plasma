@@ -95,6 +95,11 @@ material-cursors-git
 smdlinux-config-plasma-git
 smdlinux-plasma-git
 smdlinux-kvantum-git
+zsh
+zsh-completions-git
+zsh-syntax-highlighting
+oh-my-zsh-git
+smdlinux-zsh-git
 )
 
 count=0
