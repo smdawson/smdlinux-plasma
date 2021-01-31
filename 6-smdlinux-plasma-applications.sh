@@ -397,6 +397,7 @@ htop
 jq
 lsb-release
 neofetch
+smdlinux-neofetch-git
 net-tools
 numlockx
 pamac-aur

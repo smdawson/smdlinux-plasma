@@ -94,6 +94,8 @@ kwin-scripts-forceblur
 material-cursors-git
 smdlinux-config-plasma-git
 smdlinux-plasma-git
+smdlinux-konsole-git
+smdlinux-kvantum-git
 )
 
 count=0
