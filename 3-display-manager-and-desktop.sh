@@ -65,6 +65,7 @@ echo -e " [${g}✔${endc}]::[${g}${b}Installation Of Core Software${enda}${endc}
 echo
 
 list=(
+openssh
 #lightdm
 #smdlinux-lightdm-gtk-greeter-plasma
 #smdlinux-lightdm-gtk-greeter-settings
@@ -73,7 +74,7 @@ sddm
 smdlinux-wallpapers-git
 plasma-meta
 kde-applications-meta
-smdlinux-sddm-theme-plasma
+#smdlinux-sddm-theme-plasma-git
 xdg-user-dirs
 )
 

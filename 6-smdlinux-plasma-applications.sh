@@ -332,7 +332,8 @@ category SMD-Linux-General
 
 list=(
 smdlinux-bin-git
-smdlinux-hblock-git
+#smdlinux-hblock-git
+smdlinux-plasma-hblock-git
 smdlinux-root-git
 )
 
@@ -401,10 +402,11 @@ smdlinux-neofetch-git
 net-tools
 numlockx
 pamac-aur
+pamac-tray-icon-plasma
 reflector
 screenfetch
 simple-scan
-sysstat
+#sysstat
 vnstat
 w3m
 wget
@@ -435,7 +437,9 @@ category Utilities
 list=(
 bashtop
 bitwarden-bin
+cdrdao
 downgrade
+dvd+rw-tools
 hardcode-fixer-git
 inxi
 mugshot
