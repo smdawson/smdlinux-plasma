@@ -272,7 +272,7 @@ category Office
 
 list=(
 evince
-evolution
+#evolution
 gnucash
 hunspell
 hunspell-en_US
@@ -283,6 +283,7 @@ joplin-desktop
 libmythes
 mythes-en
 libreoffice-fresh
+thunderbird
 )
 
 count=0
