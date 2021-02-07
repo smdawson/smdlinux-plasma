@@ -201,6 +201,7 @@ end_category Games
 category Graphics
 
 list=(
+blender
 cura	
 gimp
 inkscape
