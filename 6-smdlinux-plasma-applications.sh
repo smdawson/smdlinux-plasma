@@ -399,6 +399,8 @@ hddtemp
 htop
 jq
 lsb-release
+man-db
+man-pages
 neofetch
 smdlinux-neofetch-git
 net-tools
