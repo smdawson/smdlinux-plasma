@@ -284,6 +284,8 @@ joplin-desktop
 libmythes
 mythes-en
 libreoffice-fresh
+perl-date-manip
+perl-finance-quote
 thunderbird
 )
 

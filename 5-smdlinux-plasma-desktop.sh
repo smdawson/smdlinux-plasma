@@ -79,6 +79,7 @@ list=(
 chromeos-kde-git
 mojave-gtk-theme
 mcmojave-kde-theme-git
+numix-icon-theme-git
 tela-icon-theme
 surfn-arc-breeze-icons-git
 mcmojave-circle-icon-theme-git
