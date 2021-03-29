@@ -449,6 +449,7 @@ dvd+rw-tools
 hardcode-fixer-git
 inxi
 mugshot
+seahorse
 the_platinum_searcher-bin
 trizen
 #variety
@@ -481,6 +482,7 @@ uudeview
 arj
 cabextract
 file-roller
+p7zip
 )
 
 count=0
