@@ -163,6 +163,7 @@ ttf-liberation
 ttf-roboto
 ttf-ubuntu-font-family
 tamsyn-font
+ttf-meslo
 )
 
 count=0
@@ -399,6 +400,7 @@ grsync
 hardinfo
 hddtemp
 htop
+hwinfo
 jq
 lsb-release
 man-db
@@ -407,8 +409,10 @@ neofetch
 smdlinux-neofetch-git
 net-tools
 numlockx
-pamac-aur
-pamac-tray-icon-plasma
+octopi
+octopi-notifier-frameworks
+#pamac-aur
+#pamac-tray-icon-plasma
 reflector
 screenfetch
 simple-scan
@@ -443,11 +447,16 @@ category Utilities
 list=(
 bashtop
 bitwarden-bin
+conky-lua
+conky-manager2-git
+smdlinux-conky-plasma
 cdrdao
 downgrade
 dvd+rw-tools
+expac
 hardcode-fixer-git
 inxi
+inetutils
 mugshot
 seahorse
 the_platinum_searcher-bin
