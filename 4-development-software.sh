@@ -85,7 +85,7 @@ git
 joplin
 joplin-desktop
 meld
-sublime-text-3
+#sublime-text-3
 the_platinum_searcher-bin
 xclip
 )

@@ -131,7 +131,7 @@ geany
 git
 gitahead-bin
 meld
-sublime-text-3
+#sublime-text-3
 )
 
 count=0
@@ -160,6 +160,7 @@ ttf-droid
 ttf-hack
 ttf-inconsolata
 ttf-liberation
+ttf-ms-fonts
 ttf-roboto
 ttf-ubuntu-font-family
 tamsyn-font
@@ -203,13 +204,15 @@ category Graphics
 
 list=(
 blender
-cura	
+#cura	
 gimp
 inkscape
 nomacs
 openscad
-prusa-slicer
-slic3r
+#prusa-slicer
+#slic3r
+superslicer-bin
+superslicer-profiles-git
 )
 
 count=0
@@ -287,7 +290,7 @@ mythes-en
 libreoffice-fresh
 perl-date-manip
 perl-finance-quote
-thunderbird
+#thunderbird
 )
 
 count=0
@@ -409,8 +412,8 @@ neofetch
 smdlinux-neofetch-git
 net-tools
 numlockx
-octopi
-octopi-notifier-frameworks
+#octopi
+#octopi-notifier-frameworks
 #pamac-aur
 #pamac-tray-icon-plasma
 reflector
@@ -449,7 +452,7 @@ bashtop
 bitwarden-bin
 conky-lua
 conky-manager2-git
-smdlinux-conky-plasma
+smdlinux-conky-plasma-git
 cdrdao
 downgrade
 dvd+rw-tools
