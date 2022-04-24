@@ -455,6 +455,7 @@ conky-manager2-git
 smdlinux-conky-plasma-git
 cdrdao
 downgrade
+dropbox
 dvd+rw-tools
 expac
 hardcode-fixer-git
