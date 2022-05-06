@@ -43,7 +43,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20200603"
+version="20220505"
 
 ####################### Functions ########################
 
@@ -276,6 +276,7 @@ end_category Multimedia
 category Office
 
 list=(
+dropbox
 evince
 #evolution
 gnucash
@@ -288,6 +289,7 @@ joplin-desktop
 libmythes
 mythes-en
 libreoffice-fresh
+obsidian
 perl-date-manip
 perl-finance-quote
 #thunderbird
@@ -416,10 +418,12 @@ numlockx
 #octopi-notifier-frameworks
 #pamac-aur
 #pamac-tray-icon-plasma
+perl-file-mimeinfo
 reflector
 screenfetch
 simple-scan
 #sysstat
+ufw-extras
 vnstat
 w3m
 wget
