@@ -43,7 +43,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20220505"
+version="20220509"
 
 ####################### Functions ########################
 
@@ -204,7 +204,7 @@ category Graphics
 
 list=(
 blender
-#cura	
+cura	
 gimp
 inkscape
 nomacs
@@ -276,6 +276,7 @@ end_category Multimedia
 category Office
 
 list=(
+calibre
 dropbox
 evince
 #evolution
@@ -419,6 +420,9 @@ numlockx
 #pamac-aur
 #pamac-tray-icon-plasma
 perl-file-mimeinfo
+python-zeroconf
+python-libcharon
+python-sentry_sdk
 reflector
 screenfetch
 simple-scan
@@ -458,6 +462,7 @@ conky-lua
 conky-manager2-git
 smdlinux-conky-plasma-git
 cdrdao
+dnsutils
 downgrade
 dropbox
 dvd+rw-tools
