@@ -124,6 +124,7 @@ end_category Accessories
 category Development
 
 list=(
+ansible-core
 arduino
 atom
 devtools
@@ -132,6 +133,8 @@ git
 gitahead-bin
 meld
 #sublime-text-3
+sshpass
+terraform
 )
 
 count=0
@@ -422,6 +425,7 @@ numlockx
 perl-file-mimeinfo
 python-zeroconf
 python-libcharon
+python-libusb1
 python-sentry_sdk
 reflector
 screenfetch
@@ -470,6 +474,7 @@ expac
 hardcode-fixer-git
 inxi
 inetutils
+jscal
 mugshot
 seahorse
 the_platinum_searcher-bin
