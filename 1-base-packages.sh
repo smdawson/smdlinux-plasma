@@ -5,7 +5,7 @@
 #             SMD-Linux Installation Script              #
 #       Base Install Script for UEFI Installation        #
 #                                                        #
-#  Run after Chroot into new system (# arch-chroot /mnt) #                           #
+#  Run after Chroot into new system (# arch-chroot /mnt) # 
 #                                                        #
 ##########################################################
 #                                                        #
@@ -34,7 +34,7 @@ function install {
   if pacman -Qi $1 &> /dev/null; then
       echo -e " [${g}✔${endc}]::[${b}"$1"${enda}] Is Already Installed!"
   else
-      sudo pacman -S --noconfirm --needed $1
+      pacman -S --noconfirm --needed $1
       # Verify Successful Installation
     if pacman -Qi $package &> /dev/null; then
       echo -e " [${g}✔${endc}]::[${b}"$1"${enda}]: Installed!"
@@ -81,7 +81,7 @@ echo '
 127.0.0.1     localhost
 ::1           localhost
 127.0.1.1     archlinux-pc.loaldomain  archlinux-pc
-' | sudo tee --append /etc/hosts
+' | tee --append /etc/hosts
 
 echo
 echo -e " [${g}✔${endc}]::[${g}${b}Set Root Password${enda}${endc}]"
@@ -105,11 +105,8 @@ dosfstools
 base-devel
 linux-headers
 linux-lts-headers
-avahi
 xdg-user-dirs
 xdg-utils
-gvfs
-gvfs-smb
 nfs-utils
 inetutils
 dnsutils
@@ -123,9 +120,6 @@ bash-completion
 openssh
 rsync
 reflector
-acpi
-acpi_call
-tlp
 virt-manager
 qemu
 qemu-arch-extra
@@ -137,9 +131,6 @@ openbsd-netcat
 iptables-nft
 ipset
 firewalld
-sof-firmware
-nss-mdns
-acpid
 os-prober
 ntfs-3g
 terminus-font
@@ -172,13 +163,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable cups.service
 systemctl enable sshd
-systemctl enable avahi-daemon
-systemctl enable tlp # You can comment this command out if you didn't install tlp, see above
 systemctl enable reflector.timer
 systemctl enable fstrim.timer
 systemctl enable libvirtd
 systemctl enable firewalld
-systemc1tl enable acpid
 
 echo
 echo -e " [${g}✔${endc}]::[${g}${b}Add User${enda}${endc}]"
@@ -188,7 +176,7 @@ useradd -m seth
 echo seth:password | chpasswd
 usermod -aG libvirt seth
 
-echo "ermanno ALL=(ALL) ALL" >> /etc/sudoers.d/seth
+echo "seth ALL=(ALL) ALL" >> /etc/sudoers.d/seth
 
 echo
 echo -e " [${g}✔${endc}]::[${g}${b}Done, Type exit, umount -a and reboot${enda}${endc}]"
