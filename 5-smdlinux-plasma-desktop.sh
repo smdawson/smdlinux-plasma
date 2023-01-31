@@ -41,7 +41,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20201220"
+version="20230131"
 
 ####################### Functions ########################
 
@@ -79,7 +79,7 @@ list=(
 chromeos-kde-git
 mojave-gtk-theme
 mcmojave-kde-theme-git
-numix-icon-theme-git
+numix-circle-icon-theme-git
 tela-icon-theme
 surfn-arc-breeze-icons-git
 mcmojave-circle-icon-theme-git
@@ -97,7 +97,7 @@ smdlinux-config-plasma-git
 smdlinux-plasma-git
 smdlinux-kvantum-git
 zsh
-zsh-completions-git
+zsh-completions
 zsh-syntax-highlighting
 oh-my-zsh-git
 smdlinux-zsh-git

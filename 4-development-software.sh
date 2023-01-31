@@ -41,7 +41,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20210126"
+version="20230131"
 
 ####################### Functions ########################
 
@@ -76,7 +76,7 @@ function end_category {
 category Development
 
 list=(
-bitwarden-bin
+bitwarden
 devtools
 discord_arch_electron
 filezilla

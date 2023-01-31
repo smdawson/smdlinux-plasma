@@ -43,7 +43,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20220509"
+version="20230131"
 
 ####################### Functions ########################
 
@@ -126,11 +126,10 @@ category Development
 list=(
 ansible-core
 arduino
-atom
 devtools
 geany
 git
-gitahead-bin
+gitahead
 meld
 #sublime-text-3
 sshpass
@@ -207,15 +206,15 @@ category Graphics
 
 list=(
 blender
-cura	
+#cura	
 gimp
 inkscape
 nomacs
 openscad
 #prusa-slicer
 #slic3r
-superslicer-bin
-superslicer-profiles-git
+superslicer
+#superslicer-profiles-git
 )
 
 count=0
@@ -239,6 +238,7 @@ firefox
 hexchat
 qbittorrent
 telegram-desktop
+tokodon
 )
 
 count=0
@@ -280,7 +280,7 @@ category Office
 
 list=(
 calibre
-dropbox
+#dropbox
 evince
 #evolution
 gnucash
@@ -288,15 +288,15 @@ hunspell
 hunspell-en_US
 hyphen
 hyphen-en
-joplin
-joplin-desktop
+#joplin
+#joplin-desktop
 libmythes
 mythes-en
 libreoffice-fresh
 obsidian
 perl-date-manip
 perl-finance-quote
-#thunderbird
+thunderbird
 )
 
 count=0
@@ -334,7 +334,7 @@ done
 
 end_category Printers
 
-sudo systemctl enable cups.service
+#sudo systemctl enable cups.service
 
 echo
 echo -e " [${g}✔${endc}]::Print Services ${b}${r}[Enabled]${endc}${enda}"
@@ -406,10 +406,11 @@ gnome-keyring
 gparted
 go
 grsync
-hardinfo
+hardinfo-git
 hddtemp
 htop
 hwinfo
+i2c-tools
 jq
 lsb-release
 man-db
@@ -420,8 +421,9 @@ net-tools
 numlockx
 #octopi
 #octopi-notifier-frameworks
-#pamac-aur
-#pamac-tray-icon-plasma
+openrgb
+pamac-aur
+pamac-tray-icon-plasma
 perl-file-mimeinfo
 python-zeroconf
 python-libcharon
@@ -460,28 +462,27 @@ end_category System
 category Utilities
 
 list=(
+alacritty
 bashtop
-bitwarden-bin
+bitwarden
 conky-lua
-conky-manager2-git
+conky-manager
 smdlinux-conky-plasma-git
 cdrdao
 dnsutils
 downgrade
-dropbox
 dvd+rw-tools
 expac
 hardcode-fixer-git
 inxi
 inetutils
-jscal
+joyutils
 mugshot
 seahorse
-the_platinum_searcher-bin
 trizen
 #variety
 xclip
-yay-bin
+yay
 youtube-dl
 )
 
@@ -548,10 +549,10 @@ end_category Final
 
 ###############################################################################
 
-echo -e " [${g}✔${endc}]::Copying all files and folders from ${b}${bu}[ /etc/skel to ~ ]${endc}${enda}"
-echo
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-cp -arf /etc/skel/. ~
+#echo -e " [${g}✔${endc}]::Copying all files and folders from ${b}${bu}[ /etc/skel to ~ ]${endc}${enda}"
+#echo
+#cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+#cp -arf /etc/skel/. ~
 
 echo -e " [${g}✔${endc}]::Software For ${b}${r}[SMD-Linux Plasma]${endc}${enda} Installed"
 echo

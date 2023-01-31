@@ -18,7 +18,7 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-version="20230125"
+version="20230131"
 
 # https://wiki.archlinux.org/index.php/Pacman/Package_signing#Adding_unofficial_keys
 echo
