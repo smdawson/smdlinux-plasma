@@ -106,6 +106,7 @@ list=(
 pipes.sh
 cronie
 mintstick-git
+timeshift
 yad
 )
 
@@ -185,6 +186,7 @@ category Games
 
 list=(
 #kmines
+lutris
 steam-native-runtime
 steam
 #supertuxkart
@@ -206,7 +208,8 @@ category Graphics
 
 list=(
 blender
-#cura	
+#cura
+flameshot	
 gimp
 inkscape
 nomacs
@@ -235,8 +238,11 @@ list=(
 discord_arch_electron
 filezilla
 firefox
+firewalld
 hexchat
+openvpn
 qbittorrent
+teams
 telegram-desktop
 tokodon
 )
@@ -334,7 +340,7 @@ done
 
 end_category Printers
 
-#sudo systemctl enable cups.service
+sudo systemctl enable cups.service
 
 echo
 echo -e " [${g}✔${endc}]::Print Services ${b}${r}[Enabled]${endc}${enda}"
@@ -411,6 +417,7 @@ hddtemp
 htop
 hwinfo
 i2c-tools
+ipset
 jq
 lsb-release
 man-db
@@ -465,7 +472,7 @@ list=(
 alacritty
 bashtop
 bitwarden
-conky-lua
+conky-lua-nv
 conky-manager
 smdlinux-conky-plasma-git
 cdrdao
@@ -549,10 +556,10 @@ end_category Final
 
 ###############################################################################
 
-#echo -e " [${g}✔${endc}]::Copying all files and folders from ${b}${bu}[ /etc/skel to ~ ]${endc}${enda}"
-#echo
-#cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
-#cp -arf /etc/skel/. ~
+echo -e " [${g}✔${endc}]::Copying all files and folders from ${b}${bu}[ /etc/skel to ~ ]${endc}${enda}"
+echo
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+cp -arf /etc/skel/. ~
 
 echo -e " [${g}✔${endc}]::Software For ${b}${r}[SMD-Linux Plasma]${endc}${enda} Installed"
 echo

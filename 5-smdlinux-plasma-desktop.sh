@@ -101,6 +101,7 @@ zsh-completions
 zsh-syntax-highlighting
 oh-my-zsh-git
 smdlinux-zsh-git
+pacman-contrib
 )
 
 count=0
@@ -115,6 +116,12 @@ done
 
 end_category SMD-Linux-Desktop
 
+
+sudo systemctl paccache.timer
+
+echo
+echo -e " [${g}✔${endc}]::Paccache Timer ${b}${r}[Enabled]${endc}${enda}"
+echo
 
 ###############################################################################
 
