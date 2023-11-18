@@ -107,6 +107,7 @@ pipes.sh
 cronie
 mintstick-git
 timeshift
+ventoy-git
 yad
 )
 
